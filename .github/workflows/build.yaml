@@ -10,7 +10,7 @@ jobs:
         uses: subosito/flutter-action@v2
         with:
           channel: stable
-          flutter-version-file: example/pubspec.yaml
+          flutter-version: 3.6.2
       - name: Fetch deps
         run: cd example && flutter pub get
       - name: Build APK
