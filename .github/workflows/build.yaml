@@ -1,0 +1,21 @@
+name: Build
+on: [push]
+jobs:
+  main:
+    runs-on: ubuntu
+    steps:
+      - name: Clone repo
+        uses: actions/checkout@v4
+      - name: Install Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version-file: example/pubspec.yml
+      - name: Fetch deps
+        run: cd example && flutter pub get
+      - name: Build APK
+        run: cd example && flutter build apk
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          path: example/build/apps/output/apk
