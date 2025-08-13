@@ -30,7 +30,7 @@ jobs:
       - name: 🔧 Build APK
         run: |
           cd example
-          ./flutterw build apk --release -v --split-per-abi
+          ./flutterw build apk -v --split-per-abi
           mkdir -p ../outputs
           cp build/app/outputs/apk/release/*.apk ../outputs/
 
