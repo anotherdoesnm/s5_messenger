@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:s5_messenger_example/main.dart';
-
+import 'dart:io' show Platform;
 import 'group_chat.dart';
 import 'group_list.dart';
 
@@ -19,7 +19,7 @@ class MLS5DemoAppView extends StatelessWidget {
             stream: s5messenger.messengerState.stream,
             builder: (context, snapshot) {
               return Row(
-                children: [
+                children: if(s5.messengerState.groupId != null && !(Platform.isAndroid || Platform.isIOS)) [
                   SizedBox(
                     width: 256,
                     child: GroupListView(),
