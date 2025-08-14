@@ -104,7 +104,6 @@ class _GroupChatViewState extends State<GroupChatView> {
           ],
         )),
         SizedBox(
-          width: 256,
           child: Column(
             children: [
               Padding(
