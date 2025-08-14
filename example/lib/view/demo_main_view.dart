@@ -24,7 +24,7 @@ class MLS5DemoAppView extends StatelessWidget {
                     width: 256,
                     child: GroupListView(),
                   ),
-                  if((Platform.isAndroid || Platform.isIOS) && s5messenger.messengerState.group == null) SizedBox(
+                  if((Platform.isAndroid || Platform.isIOS) && s5messenger.messengerState.groupId == null) SizedBox(
                     width: 256,
                     child: GroupListView(),
                   ),
