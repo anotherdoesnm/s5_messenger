@@ -30,6 +30,18 @@ dependencies:
 
 See [example](./example/)
 
+> ⚠ `cargo` is required to build this project. Make sure to install first [here](https://www.rust-lang.org/tools/install)
+
+To test the library:
+
+```bash
+git clone --recursive https://github.com/s5-dev/s5_messenger.git # make sure to recuse submodules
+# If you forgot to recurse and already cloned you can do this
+# git submodule init && git submodule update
+cd s5_messenger/
+./flutterw run # Make sure to run with the flutter wrapper so everyone is on the same flutter version
+```
+
 ## Contributing
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md) for development setup using:
