@@ -104,6 +104,7 @@ class _GroupChatViewState extends State<GroupChatView> {
           ],
         )),
         SizedBox(
+          width: MediaQuery.of(context).size.width,
           child: Column(
             children: [
               Padding(
